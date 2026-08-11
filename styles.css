@@ -1,0 +1,429 @@
+/* ============================================================
+   ACTIVIDAD PRÁCTICA — GIT & VISUAL STUDIO CODE
+   Programa: Tecnólogo en Análisis y Desarrollo de Software (ADSO)
+   Archivo: styles.css
+   Descripción: Estilos personalizados que complementan Bootstrap 5
+   y aplican la identidad institucional del SENA.
+   ============================================================ */
+
+/* ---------- 1. Variables institucionales SENA ---------- */
+:root {
+  --sena-verde: #39A900;
+  --sena-verde-oscuro: #2d8500;
+  --sena-azul: #00304D;
+  --sena-azul-claro: #00537a;
+  --sena-gris-claro: #f4f6f5;
+  --sena-blanco: #ffffff;
+  --sena-amarillo: #ffb600; /* color de apoyo institucional */
+  --sombra-suave: 0 4px 14px rgba(0, 48, 77, 0.12);
+}
+
+/* ---------- 2. Estructura general ---------- */
+body {
+  background-color: var(--sena-gris-claro);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--sena-azul);
+}
+
+/* ---------- 3. Encabezado / Hero institucional ---------- */
+.hero-sena {
+  background: linear-gradient(135deg, var(--sena-azul) 0%, var(--sena-azul-claro) 100%);
+  color: var(--sena-blanco);
+  padding: 3.5rem 1rem 4.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-sena::after {
+  /* Franja verde decorativa que evoca la identidad SENA */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: var(--sena-verde);
+}
+
+.hero-sena .badge-programa {
+  background-color: var(--sena-verde);
+  color: var(--sena-blanco);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+
+.hero-sena h1 {
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.hero-sena p.lead {
+  color: #dce9f2;
+  max-width: 700px;
+}
+
+.hero-logo-circle {
+  width: 90px;
+  height: 90px;
+  background-color: var(--sena-verde);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--sena-blanco);
+  box-shadow: var(--sombra-suave);
+  border: 3px solid var(--sena-blanco);
+}
+
+/* ---------- 4. Sección de instrucciones ---------- */
+.instrucciones-box {
+  background-color: var(--sena-blanco);
+  border-left: 6px solid var(--sena-verde);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--sombra-suave);
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.instrucciones-box h2 {
+  color: var(--sena-azul);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.instrucciones-box code {
+  background-color: var(--sena-gris-claro);
+  color: var(--sena-verde-oscuro);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* ---------- 5. Tarjetas de aprendices (Cards) ---------- */
+.card-aprendiz {
+  border: none;
+  border-radius: 14px;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-aprendiz:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 48, 77, 0.18);
+}
+
+.card-aprendiz .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--sena-verde);
+}
+
+.card-aprendiz .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-aprendiz .card-title {
+  color: var(--sena-azul);
+  font-weight: 700;
+}
+
+.card-aprendiz .card-subtitle {
+  color: var(--sena-verde-oscuro) !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.card-aprendiz .badge-ficha {
+  background-color: var(--sena-azul);
+  color: var(--sena-blanco);
+  font-weight: 500;
+}
+
+.card-aprendiz .btn-ver-hv {
+  background-color: var(--sena-verde);
+  border: none;
+  color: var(--sena-blanco);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.card-aprendiz .btn-ver-hv:hover {
+  background-color: var(--sena-verde-oscuro);
+  color: var(--sena-blanco);
+}
+
+/* Tarjeta de ejemplo destacada */
+.card-ejemplo {
+  border: 2px dashed var(--sena-verde);
+}
+
+.card-ejemplo .badge-ejemplo {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--sena-amarillo);
+  color: var(--sena-azul);
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  box-shadow: var(--sombra-suave);
+  z-index: 3;
+}
+
+/* Tarjetas plantilla (por editar) */
+.card-plantilla {
+  border: 2px dashed #b7c4cc;
+  background-color: #fbfcfc;
+}
+
+.card-plantilla .card-img-top {
+  border-bottom: 4px dashed #b7c4cc;
+  background-color: #e9edef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8ea0aa;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.card-plantilla .numero-tarjeta {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--sena-azul);
+  color: var(--sena-blanco);
+  font-weight: 700;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: var(--sombra-suave);
+}
+
+/* ---------- 6. Pie de página ---------- */
+footer.footer-sena {
+  background-color: var(--sena-azul);
+  color: var(--sena-blanco);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+footer.footer-sena a {
+  color: var(--sena-verde);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer.footer-sena a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   ESTILOS PARA LA HOJA DE VIDA (HV_nombre_aprendiz.html)
+   ============================================================ */
+
+/* ---------- 7. Encabezado de la Hoja de Vida ---------- */
+.hv-header {
+  background: linear-gradient(135deg, var(--sena-azul) 0%, var(--sena-azul-claro) 100%);
+  color: var(--sena-blanco);
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+.hv-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--sena-verde);
+}
+
+.hv-foto-perfil {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--sena-blanco);
+  box-shadow: var(--sombra-suave);
+}
+
+/* ---------- 8. Secciones de la hoja de vida ---------- */
+.hv-seccion {
+  background-color: var(--sena-blanco);
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.hv-seccion h2 {
+  color: var(--sena-azul);
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-bottom: 3px solid var(--sena-verde);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hv-seccion h2 .icono-seccion {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  background-color: var(--sena-verde);
+  color: var(--sena-blanco);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Línea de tiempo para formación y experiencia */
+.hv-timeline-item {
+  border-left: 3px solid var(--sena-verde);
+  padding-left: 1.2rem;
+  padding-bottom: 1.2rem;
+  position: relative;
+}
+
+.hv-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.hv-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--sena-blanco);
+  border: 3px solid var(--sena-verde);
+  border-radius: 50%;
+}
+
+.hv-timeline-item .hv-fecha {
+  color: var(--sena-verde-oscuro);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Barras de progreso para habilidades técnicas */
+.hv-skill-item {
+  margin-bottom: 1rem;
+}
+
+.hv-skill-item .progress {
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--sena-gris-claro);
+}
+
+.hv-skill-item .progress-bar {
+  background-color: var(--sena-verde);
+}
+
+/* Badges de habilidades blandas y certificaciones */
+.hv-badge-soft {
+  background-color: #eaf5e0;
+  color: var(--sena-verde-oscuro);
+  border: 1px solid var(--sena-verde);
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border-radius: 30px;
+  margin: 0.25rem;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.hv-badge-cert {
+  background-color: var(--sena-azul);
+  color: var(--sena-blanco);
+  border-radius: 8px;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Datos de contacto */
+.hv-contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.hv-contacto-item .icono-contacto {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  background-color: var(--sena-gris-claro);
+  color: var(--sena-verde-oscuro);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- 9. Botón flotante "Volver al inicio" ---------- */
+.btn-volver-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--sena-verde);
+  color: var(--sena-blanco);
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0, 48, 77, 0.3);
+  text-decoration: none;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-volver-flotante:hover {
+  background-color: var(--sena-verde-oscuro);
+  color: var(--sena-blanco);
+  transform: translateY(-3px);
+}
+
+/* ---------- 10. Responsividad adicional ---------- */
+@media (max-width: 576px) {
+  .hero-sena h1 {
+    font-size: 1.6rem;
+  }
+
+  .hv-foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .btn-volver-flotante {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.85rem;
+  }
+}

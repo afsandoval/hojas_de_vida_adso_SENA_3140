@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio de Aprendices ADSO | SENA</title>
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (CDN) - se usan para los íconos de contacto y secciones -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Estilos personalizados con la identidad SENA -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO / ENCABEZADO INSTITUCIONAL
+       ============================================================ -->
+  <header class="hero-sena text-center text-md-start">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+        <div class="hero-logo-circle">SENA</div>
+        <div>
+          <span class="badge-programa">Tecnólogo en Análisis y Desarrollo de Software — ADSO</span>
+          <h1>Directorio de Aprendices</h1>
+          <p class="lead mb-0">
+            Actividad práctica de Control de Versiones con <strong>Git</strong> y
+            <strong>Visual Studio Code</strong>. Cada aprendiz edita su propia tarjeta
+            y construye su Hoja de Vida como parte del proceso de aprendizaje.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       INSTRUCCIONES DE LA ACTIVIDAD
+       ============================================================ -->
+  <div class="container">
+    <div class="instrucciones-box">
+      <h2><i class="bi bi-git text-success"></i> ¿Qué debo hacer en esta actividad?</h2>
+      <ol class="mb-0">
+        <li>Clona este repositorio en tu equipo usando <code>git clone</code>.</li>
+        <li>Abre la carpeta del proyecto con <strong>Visual Studio Code</strong>.</li>
+        <li>Busca en este archivo <code>index.html</code> la tarjeta con tu número asignado por el instructor.</li>
+        <li>Reemplaza los comentarios <code>&lt;!-- EDITA AQUÍ ... --&gt;</code> con tu foto, nombre y biografía corta.</li>
+        <li>Crea tu propio archivo <code>HV_nombre_aprendiz.html</code> (puedes copiar <code>HV_ejemplo.html</code> como base) con tu Hoja de Vida completa.</li>
+        <li>Actualiza el enlace del botón <em>"Ver Hoja de Vida Completa"</em> de tu tarjeta para que apunte a tu archivo.</li>
+        <li>Guarda los cambios con <code>git add</code>, <code>git commit</code> y <code>git push</code>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CUADRÍCULA DE TARJETAS (15 EN TOTAL)
+       ============================================================ -->
+  <main class="container my-5">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+      <!-- ============================================================
+           CARD 0 — TARJETA DE EJEMPLO COMPLETA (datos ficticios)
+           Esta tarjeta NO debe editarse. Sirve como modelo visual
+           para que los aprendices vean cómo debe quedar la suya.
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-ejemplo position-relative">
+          <span class="badge-ejemplo"><i class="bi bi-stars"></i> EJEMPLO</span>
+          <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&h=500&fit=crop&crop=faces"
+               class="card-img-top" alt="Foto de perfil de aprendiz de ejemplo">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start">Ficha 2831245</span>
+            <h5 class="card-title">Camila Andrea Rodríguez Pinzón</h5>
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre 3</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> 21 años</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> Tunja, Boyacá</p>
+            <p class="card-text">
+              Apasionada por el desarrollo web y el análisis de datos. Actualmente
+              aprendiendo Git, Python y Django dentro de mi formación en el SENA.
+              Me gusta resolver problemas y trabajar en equipo.
+            </p>
+            <a href="HV_ejemplo.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 1 — PLANTILLA PARA APRENDIZ #1
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">1</span>
+          <!-- EDITA AQUÍ TU FOTO: reemplaza la URL del src por el enlace de tu foto -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 1">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO (ej: Aprendiz ADSO — Trimestre X) -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA (2 a 3 líneas) -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 2 — PLANTILLA PARA APRENDIZ #2
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">2</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 2">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 3 — PLANTILLA PARA APRENDIZ #3
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">3</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 3">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 4 — PLANTILLA PARA APRENDIZ #4
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">4</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 4">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 5 — PLANTILLA PARA APRENDIZ #5
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">5</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 5">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 6 — PLANTILLA PARA APRENDIZ #6
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">6</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 6">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 7 — PLANTILLA PARA APRENDIZ #7
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">7</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 7">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 8 — PLANTILLA PARA APRENDIZ #8
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">8</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 8">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 9 — PLANTILLA PARA APRENDIZ #9
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">9</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 9">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 10 — PLANTILLA PARA APRENDIZ #10
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">10</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 10">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 11 — PLANTILLA PARA APRENDIZ #11
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">11</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 11">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 12 — PLANTILLA PARA APRENDIZ #12
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">12</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 12">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 13 — PLANTILLA PARA APRENDIZ #13
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">13</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 13">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           CARD 14 — PLANTILLA PARA APRENDIZ #14
+           ============================================================ -->
+      <div class="col">
+        <div class="card card-aprendiz card-plantilla position-relative">
+          <span class="numero-tarjeta">14</span>
+          <!-- EDITA AQUÍ TU FOTO -->
+          <img src="https://via.placeholder.com/500x500.png?text=Tu+Foto+Aqui"
+               class="card-img-top" alt="Foto de perfil del aprendiz 14">
+          <div class="card-body">
+            <span class="badge badge-ficha mb-2 align-self-start"><!-- EDITA AQUÍ TU FICHA -->Ficha 0000000</span>
+            <!-- EDITA AQUÍ TU NOMBRE -->
+            <h5 class="card-title">Nombre Completo del Aprendiz</h5>
+            <!-- EDITA AQUÍ TU TÍTULO CORTO -->
+            <h6 class="card-subtitle mb-2">Aprendiz ADSO — Trimestre X</h6>
+            <p class="card-text text-muted mb-1"><i class="bi bi-cake2"></i> <!-- EDITA AQUÍ TU EDAD -->Edad</p>
+            <p class="card-text text-muted mb-2"><i class="bi bi-geo-alt"></i> <!-- EDITA AQUÍ TU CIUDAD -->Ciudad</p>
+            <!-- EDITA AQUÍ TU BIOGRAFÍA CORTA -->
+            <p class="card-text">Escribe aquí una breve biografía sobre ti, tus intereses y lo que esperas aprender en el programa ADSO.</p>
+            <!-- EDITA AQUÍ EL ENLACE A TU HOJA DE VIDA -->
+            <a href="HV_nombre_aprendiz.html" class="btn btn-ver-hv">
+              <i class="bi bi-file-earmark-person"></i> Ver Hoja de Vida Completa
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA INSTITUCIONAL
+       ============================================================ -->
+  <footer class="footer-sena text-center">
+    <div class="container">
+      <p class="mb-1"><i class="bi bi-git"></i> Actividad práctica de Git &amp; Visual Studio Code</p>
+      <p class="mb-0">Servicio Nacional de Aprendizaje — SENA | Tecnólogo en Análisis y Desarrollo de Software (ADSO)</p>
+      <p class="mb-0"><a href="https://github.com/" target="_blank" rel="noopener">Repositorio del curso en GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (solo para componentes como el navbar responsivo, si se necesita) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
